@@ -11,9 +11,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 def driver():
     options = webdriver.ChromeOptions()
     options.add_argument("--window-size=1920,1080")
-    driver = webdriver.Remote(
-        command_executor='http://localhost:4444/wd/hub',
-        options=options
-    )
+    driver = webdriver.Chrome()
     yield driver
     driver.quit()
