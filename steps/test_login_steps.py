@@ -29,7 +29,7 @@ def enter_password(driver):
 @when("user clicks login button")
 def click_login(driver):
     page= LoginPage(driver)
-    time.sleep(30)
+    time.sleep(15)
     page.click_login()
   
     
